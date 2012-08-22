@@ -11,7 +11,8 @@ body{
 	line-height: 1.5em;
 	-webkit-font-smoothing:antialiased;
 }
-body > header , body > section , body > footer{
+
+body > div > header , body > div > section , body > div > footer{
 	max-width: 640px;
 	margin: 0 auto;
 }
@@ -19,11 +20,11 @@ body > header , body > section , body > footer{
 a{ text-decoration: none; color: #131313; border-bottom: #131313 1px solid;}
 
 /* Top header */
-body > header{
+body > div > header{
 	color: #949494; 
-	padding:30px 0 30px 0;
+	padding:80px 0 30px 0;
 }
-	body > header h1 a , body > header h1 a:hover{
+	body > div > header h1 a , body > div > header h1 a:hover{
 		/* SET FROM THEME, ALSO OPTIONALLY ALLOW A LOGO*/
 		color: #4ECDC4;
 		border-bottom: 0;
@@ -31,10 +32,10 @@ body > header{
 		font-weight: 700;
 		font-size:45px;
 	}
-	body > header h1 a:hover {
+	body > div > header h1 a:hover {
 		border-bottom: 0; 
 	}
-	body > header p{
+	body > div > header p{
 		max-width:450px;
 	}
 p a, p a:visited{
@@ -103,6 +104,28 @@ footer > p {
 	font-size: 14px;
 }
 
+/* Top bar */
+div#top-bar{
+	position:fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	min-height:30px;
+	background-color:#4ECDC4;
+}
+
+/* Mobile overrides */
+@media screen and (max-width:320px) {
+	body > header , body > section , body > footer{
+		width: 100%;
+		padding:5px;
+	}
+	.blog , .blog-teaser{
+		width: 100%;
+		max-width: 300px;
+	}
+}
+
 </style>
 </head>
 <body>
@@ -114,6 +137,9 @@ footer > p {
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=136207514366";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+	<div id='top-bar'>
+		<span class='cta'></span>
+	</div>
 	<header>
 		<h1><a href='#'>Your intro here</a></h1>
 		<p>This is a description of your company.  What you put here is completely up to you! Oh, <a href='#'>here's a link</a>.</p>

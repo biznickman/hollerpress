@@ -39,7 +39,9 @@ p a:hover{
 	text-decoration: none;	
 }
 
-
+header > h1{
+	line-height: 1.5em;
+}
 
 /* Article styling */
 article > header h1{
@@ -81,9 +83,11 @@ nav{
 }
 nav.pagination span.previous{
 	float:left;
+	max-width:300px;
 }
 nav.pagination span.next{
 	float:right;
+	max-width:300px;
 }
 
 /* Footer */

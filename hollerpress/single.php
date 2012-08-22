@@ -4,7 +4,7 @@
 			<article>
 				<header>
 					<h1><a href='#'><?php the_title(); ?></a></h1>
-					<p>Posted on <time datetime="<?php the_date('N'); ?>"><?php the_date('F jS, Y'); ?></time></p>
+					<p>Posted on <time datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date('F jS, Y'); ?></time></p>
 				</header>
 				<section>
 					<?php the_content(); ?>
@@ -21,7 +21,7 @@
 		<?php } ?>
 		<?php endwhile; ?>
 		<nav class="pagination">
-			<span class="previous"><a href='#'>&larr; Previous</a></span>
-			<span class="next">Next &rarr;</span>
+			<span class="previous"><?php previous_post_link('&larr; %link'); ?></span>
+			<span class="next"><?php next_post_link('%link &rarr;'); ?></span>
 		</nav>
 	<?php get_footer(); ?>

@@ -9,8 +9,7 @@
 		</section>
 		<?php endwhile; endif; ?>
 		<nav class="pagination">
-			<!--<span class="previous"><a href='#'>&larr; Previous</a></span>
-			<span class="next">Next &rarr;</span>-->
-			<?php if(function_exists('wp_page_numbers')) : wp_page_numbers(); endif; ?>
+			<span class="previous"><?php previous_posts_link('&larr; Previous', 0) ?></span>
+			<span class="next"><?php next_posts_link('Next &rarr;', 0); ?></span>
 		</nav>
 	<?php get_footer(); ?>
