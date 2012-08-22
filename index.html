@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>This is the title</title>
+<style type='text/css'>
+/* Color scheme via http://colorschemedesigner.com/ */
+.primary_color{ color: #4ECDC4; }
+.secondary_color{ color: #131313; }
+.tertiary_color{ color: #60D4AE; }
+.text_color{ color: #222; }
+body{
+	color: #222;
+	font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	line-height: 1.5em;
+	-webkit-font-smoothing:antialiased;
+}
+body > header , body > section , body > footer{
+	max-width: 640px;
+	margin: 0 auto;
+}
+
+a{ text-decoration: none; color: #131313; border-bottom: #131313 1px solid;}
+
+/* Top header */
+body > header{
+	color: #949494; 
+	padding:30px 0 30px 0;
+}
+	body > header h1 a , body > header h1 a:hover{
+		/* SET FROM THEME, ALSO OPTIONALLY ALLOW A LOGO*/
+		border-bottom: 0;
+		text-decoration:none;
+		font-weight: 700;
+		font-size:45px;
+	}
+	body > header h1 a:hover {
+		border-bottom: 0; 
+	}
+	body > header p{
+		max-width:450px;
+	}
+p a, p a:visited{
+	color: #131313;
+	text-decoration:none;
+}
+p a:hover{
+	text-decoration: none;	
+}
+
+
+
+/* Article styling */
+article > header h1{
+	font-size: 27px;
+	margin: 0;
+}
+article h2{
+	font-size: 23px;
+}
+article > header h1 a{
+	border-bottom: 0;
+	color: #222;
+}
+article > header h1 a:hover{
+	border-bottom: #222 1px solid;
+}
+article > header p{
+	color: #949494;
+}
+
+em{
+	font-style:normal;
+	background-color: #C7F464;
+	padding: 0.1em;
+}
+blockquote{
+	border-left: #C7F464 13px solid;
+	margin: 0;
+	padding-left: 15px;
+}
+
+/* Article sharing links */
+
+/* Comments */
+
+/* Pagination */
+nav{
+	height:20px;
+}
+nav.pagination span.previous{
+	float:left;
+}
+nav.pagination span.next{
+	float:right;
+}
+
+/* Footer */
+footer {
+	text-align:center;
+}
+footer > p {
+	color: #949494;
+	padding-top: 10px;
+	margin-bottom: 30px;
+	font-size: 14px;
+}
+
+</style>
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=136207514366";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+	<header>
+		<h1><a href='#' class='primary_color'>Your intro here</a></h1>
+		<p>This is a description of your company.  What you put here is completely up to you! Oh, <a href='#'>here's a link</a>.</p>
+	</header>
+	<section>
+		<section class='blog'>
+			<article>
+				<header>
+					<h1><a href='#'>This is the title to your article</a></h1>
+					<p>Posted on <time datetime="2012-08-10T18:41:00-50:00">August 10, 2012</time></p>
+				</header>
+				<section>
+					<p>
+					Lorem ipsum dolor sit amet, <a href='#'>consectetur</a> adipiscing elit. In pulvinar, libero eget dapibus fringilla, ante risus vulputate quam, sit amet ultricies felis elit ut lectus. Aenean velit ligula, consectetur ac fringilla ultrices, eleifend nec turpis. Fusce molestie ornare rutrum. Integer eu pharetra tellus. Praesent adipiscing ante et sapien ornare quis venenatis ligula condimentum. <em>Nunc vitae consequat orci</em>. Phasellus eleifend erat at lectus volutpat euismod. Donec et neque pulvinar felis lobortis lobortis. Integer vehicula consectetur egestas. Vivamus ac lectus ac neque dictum aliquam. <strong>In adipiscing dignissim nisl, nec vestibulum augue rutrum a. Morbi rutrum ornare sem dictum facilisis. Nullam ut metus magna</strong>. Cras mauris est, porttitor in iaculis et, commodo quis dolor. Vivamus sit amet arcu eros.
+					</p><p>
+					Suspendisse potenti. Nunc lectus dui, scelerisque at adipiscing sed, tempor a mi. Curabitur mauris mi, tristique ac tincidunt sed, porta eget justo. Quisque faucibus nulla in nisl congue sit amet elementum justo luctus. Aenean consequat posuere placerat. Donec commodo sem vel ante suscipit eu suscipit felis lobortis. Maecenas hendrerit aliquet nunc a sollicitudin. Vivamus gravida ipsum vitae nisi vestibulum fermentum vel a libero. Aenean ornare tincidunt eleifend. Praesent sagittis nisl ac arcu rhoncus feugiat. Vivamus et risus ligula. Donec egestas feugiat nisl, sit amet posuere enim porttitor quis. Donec dapibus venenatis turpis, a gravida ligula elementum et. In tempus dignissim erat eget ultricies.
+					</p>
+					<blockquote>
+						<p>Here is a quote that I've taken from someone else</p>
+					</blockquote>
+					<h2>This is a sub-heading</h2>
+					<p>
+					Donec sed vulputate justo. Mauris non risus lacus. Proin imperdiet pretium varius. Sed consequat eleifend metus, sit amet luctus elit auctor et. Nam eleifend interdum nisl ut pretium. Vestibulum eget justo non erat feugiat gravida sed luctus elit. In purus nisi, congue quis tempor in, dapibus eget tellus. Suspendisse dolor lorem, vulputate at lacinia ut, molestie et lacus. Sed sodales imperdiet hendrerit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer sit amet est libero, at suscipit quam. Pellentesque pulvinar dignissim lectus nec porttitor. Aliquam purus purus, feugiat sed egestas et, pharetra sit amet neque. Duis in suscipit lectus. Integer sollicitudin sem non nisl lobortis lacinia. Vivamus ut sem pellentesque neque placerat tempus.</p>
+					<ul>
+						<li>This is a list item<br />That has multiple</li>
+						<li>This is another list item</li>
+					</ul>
+				</section>
+			</article>
+		</section>
+		<section class='comments'>
+			<h3>Please Leave A Comment!</h3>
+			<section>
+				<div class="fb-comments" data-href="http://nickoneill.com/a-step-many-developers-hoped-twitter-wouldnt-take/" data-num-posts="10" data-width="708"></div>
+			</section>
+		</section>
+		<nav class="pagination">
+			<span class="previous"><a href='#'>&larr; Previous</a></span>
+			<span class="next">Next &rarr;</span>
+		</nav>
+	</section>
+	<footer>
+		<p>Copyright &copy; 2012 Your Company
+	</footer>
+</body>
+</html>
