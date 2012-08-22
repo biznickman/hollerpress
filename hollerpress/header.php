@@ -32,7 +32,18 @@
 		if( isset($theme_options['logo']) ){
 	?>
 	<meta property="og:image" content="<?= $theme_options['logo'] ?>" /> 
-	<?php } } ?>
+	<?php } }
+	if( isset($theme_options['logo']) ){
+	?>
+	<style type='text/css'>
+		body > header h1{
+			text-indent:-3000px;
+			background:url('<?= $theme_options['logo'] ?>') no-repeat;
+			height: 110px;
+			width: 300px;
+		}
+	</style>
+	<?php } ?>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title><?php if (is_home()) : ?>
 	<?php bloginfo('name'); ?>

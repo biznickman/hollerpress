@@ -91,6 +91,14 @@ function hp_options_do_page() {
 						<label class="description" for="hp_options[google_analytics]"><?php _e( 'Your Google Analytics account. (e.g. UA-XXXXXXXXX-X)', 'hollerpress_theme' ); ?></label>
 					</td>
 				</tr>
+
+				<!-- Logo -->
+				<tr valign="top"><th scope="row"><?php _e( 'Logo', 'hollerpress_theme' ); ?></th>
+					<td>
+						<input id="hp_options[logo]" class="regular-text" type="text" name="hp_options[logo]" value="<?php esc_attr_e( $options['logo'] ); ?>" />
+						<label class="description" for="hp_options[logo]"><?php _e( 'Enter a URL of your logo', 'hollerpress_theme' ); ?></label>
+					</td>
+				</tr>
 			</table>
 
 			<p class="submit">
