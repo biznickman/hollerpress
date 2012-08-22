@@ -6,12 +6,15 @@ if ( function_exists( 'add_theme_support' ) ) {
 }
 
 /* Create theme options:
- * - Facebook app id for comments
- * - Header text (accepts HTML)
- * - Facebook Page or profile (Subscribe vs like)
+ * - Facebook app id for comments - fb_app_id
+ * - Facebook user id - fb_user_id
+ * - Header text (accepts HTML) - site_description
+ * - Facebook Page or profile (Subscribe vs like) - 
  * - Twitter username
+ * - Copyright by - copyright
  * - RSS URL - 
- * - Logo
+ * - Logo - logo
+ * - Google Analytics - google_analytics
  */
 
 add_action( 'admin_init', 'hp_options_init' );
@@ -73,6 +76,21 @@ function hp_options_do_page() {
 					</td>
 				</tr>
 				
+				<!-- Copyright tag -->
+				<tr valign="top"><th scope="row"><?php _e( 'Copyright tag', 'hollerpress_theme' ); ?></th>
+					<td>
+						<input id="hp_options[copyright]" class="regular-text" type="text" name="hp_options[copyright]" value="<?php esc_attr_e( $options['copyright'] ); ?>" />
+						<label class="description" for="hp_options[copyright]"><?php _e( 'This is the text that will be displayed after the copyright tag.', 'hollerpress_theme' ); ?></label>
+					</td>
+				</tr>
+
+				<!-- Google Analytics Tag -->
+				<tr valign="top"><th scope="row"><?php _e( 'Google Analytics Tag', 'hollerpress_theme' ); ?></th>
+					<td>
+						<input id="hp_options[google_analytics]" class="regular-text" type="text" name="hp_options[google_analytics]" value="<?php esc_attr_e( $options['google_analytics'] ); ?>" />
+						<label class="description" for="hp_options[google_analytics]"><?php _e( 'Your Google Analytics account. (e.g. UA-XXXXXXXXX-X)', 'hollerpress_theme' ); ?></label>
+					</td>
+				</tr>
 			</table>
 
 			<p class="submit">
