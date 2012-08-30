@@ -15,6 +15,7 @@ if ( function_exists( 'add_theme_support' ) ) {
  * - RSS URL - 
  * - Logo - logo
  * - Google Analytics - google_analytics
+ * - End of post call to action - post_cta
  */
 
 add_action( 'admin_init', 'hp_options_init' );
@@ -97,6 +98,14 @@ function hp_options_do_page() {
 					<td>
 						<input id="hp_options[logo]" class="regular-text" type="text" name="hp_options[logo]" value="<?php esc_attr_e( $options['logo'] ); ?>" />
 						<label class="description" for="hp_options[logo]"><?php _e( 'Enter a URL of your logo', 'hollerpress_theme' ); ?></label>
+					</td>
+				</tr>
+				
+				<!-- End of post call to action -->
+				<tr valign="top"><th scope="row"><?php _e( 'Post call to action', 'hollerpress_theme' ); ?></th>
+					<td>
+						<textarea id="hp_options[post_cta]" name="hp_options[post_cta]" class="regular-text" cols="41" rows="5"><?php esc_attr_e( $options['post_cta'] ); ?></textarea>
+						<label class="description" for="hp_options[post_cta]"><?php _e( 'HTML for after post call to action', 'hollerpress_theme' ); ?></label>
 					</td>
 				</tr>
 			</table>

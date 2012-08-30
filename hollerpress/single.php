@@ -1,3 +1,4 @@
+<?php $theme_options = get_option('hp_options'); ?>
 <?php get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 		<section class='blog'>
@@ -11,7 +12,12 @@
 				</section>
 			</article>
 		</section>
-		<?php if( 'open' == $post->comment_status ){ ?>
+		<?php if( isset($theme_options['post_cta']) ){ 
+			if( strlen(trim($theme_options['post_cta'])) > 0 ){ ?>
+		<section class='post-cta'>
+			<?= $theme_options['post_cta'] ?>
+		</section>
+		<?php } } if( 'open' == $post->comment_status ){ ?>
 		<section class='comments'>
 			<h3>Please Leave A Comment!</h3>
 			<section>
