@@ -75,6 +75,28 @@ blockquote{
 
 /* Article sharing links */
 
+.blog{
+	position: relative;
+}
+
+.post-sidebar-cta{
+	height: 53px;
+padding-top: 18px;
+text-transform: none !important;
+font-weight: normal !important;
+font-size: 12px !important;
+text-align: left !important;
+position: absolute;
+left: -265px;
+top: -15px;
+width: 245px;	
+}
+
+.post-sidebar-cta > div {
+	/*position: fixed;
+	top: 16px;*/
+}
+
 /* Comments */
 
 /* Pagination */

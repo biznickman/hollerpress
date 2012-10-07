@@ -4,15 +4,24 @@
 <title>This is the title</title>
 <style type='text/css'>
 /* Color scheme via http://colorschemedesigner.com/ */
+@font-face {
+  font-family: "FontAwesome";
+  src: url('./hollerpress/font/fontawesome-webfont.eot');
+  src: url('./hollerpress/font/fontawesome-webfont.eot?#iefix') format('eot'), url('./hollerpress/font/fontawesome-webfont.woff') format('woff'), url('./hollerpress/font/fontawesome-webfont.ttf') format('truetype'), url('./hollerpress/font/fontawesome-webfont.svg#FontAwesome') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body{
 	color: #222;
-	font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+	/*font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 	font-weight: 300;
 	line-height: 1.5em;
 	-webkit-font-smoothing:antialiased;
 }
 
-body > div > header , body > div > section , body > div > footer{
+body > header , body > section , body > footer{
 	max-width: 640px;
 	margin: 0 auto;
 }
@@ -20,11 +29,11 @@ body > div > header , body > div > section , body > div > footer{
 a{ text-decoration: none; color: #131313; border-bottom: #131313 1px solid;}
 
 /* Top header */
-body > div > header{
+body > header{
 	color: #949494; 
 	padding:80px 0 30px 0;
 }
-	body > div > header h1 a , body > div > header h1 a:hover{
+	body > header h1 a , body > div > header h1 a:hover{
 		/* SET FROM THEME, ALSO OPTIONALLY ALLOW A LOGO*/
 		color: #4ECDC4;
 		border-bottom: 0;
@@ -32,10 +41,10 @@ body > div > header{
 		font-weight: 700;
 		font-size:45px;
 	}
-	body > div > header h1 a:hover {
+	body > header h1 a:hover {
 		border-bottom: 0; 
 	}
-	body > div > header p{
+	body > header p{
 		max-width:450px;
 	}
 p a, p a:visited{
@@ -50,11 +59,16 @@ p a:hover{
 
 /* Article styling */
 article > header h1{
-	font-size: 27px;
+	font-size: 1.7em;
+	/*font-size: 27px;*/
 	margin: 0;
 }
 article h2{
-	font-size: 23px;
+	/*font-size: 23px;*/
+	font-size: 1.4em;
+}
+article h3{
+	font-size: 1.1em;
 }
 article > header h1 a{
 	border-bottom: 0;
@@ -137,9 +151,6 @@ div#top-bar{
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=136207514366";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-	<div id='top-bar'>
-		<span class='cta'></span>
-	</div>
 	<header>
 		<h1><a href='#'>Your intro here</a></h1>
 		<p>This is a description of your company.  What you put here is completely up to you! Oh, <a href='#'>here's a link</a>.</p>

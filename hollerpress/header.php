@@ -34,6 +34,7 @@
 	<meta property="og:image" content="<?= $theme_options['logo'] ?>" /> 
 	<?php } }
 	if( isset($theme_options['logo']) ){
+		if( trim($theme_options['logo']) != '' ){ 
 	?>
 	<style type='text/css'>
 		body > header h1{
@@ -43,7 +44,7 @@
 			width: 300px;
 		}
 	</style>
-	<?php } ?>
+	<?php } } ?>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title><?php if (is_home()) : ?>
 	<?php bloginfo('name'); ?>
@@ -56,7 +57,7 @@
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', "<?= $theme_options['google_analytics'] ?>");
+	  _gaq.push(['_setAccount', '<?= $theme_options["google_analytics"] ?>');
 	  _gaq.push(['_trackPageview']);
 
 	  (function() {

@@ -2,6 +2,11 @@
 <?php get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 		<section class='blog'>
+			<!--<section class='post-sidebar-cta'>
+				<div>
+				Sharing widgets go here
+				</div>
+			</section>-->
 			<article>
 				<header>
 					<h1><a href='#'><?php the_title(); ?></a></h1>
