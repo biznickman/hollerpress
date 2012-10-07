@@ -7,6 +7,7 @@
 <head>
 	<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta name="viewport" content="width=device-width" />
 	<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
 	<meta property="og:title" content="<?php the_title(); ?>" /> 
 	<meta property="og:url" content="<?php the_permalink(); ?>" />
