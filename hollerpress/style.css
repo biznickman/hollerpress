@@ -1,3 +1,11 @@
+/*
+Theme URI: https://github.com/biznickman/hollerpress
+Author: Nick O'Neill
+Author URI: http://nickoneill.com/
+Description: A lightweight theme designed to be optimized for SEO and sharing with little configuration.
+Version: 1.0
+*/
+
 body{
 	color: #222;
 	font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -87,7 +95,7 @@ blockquote{
 }
 
 .post-sidebar-cta{
-	height: 53px;
+height: 53px;
 padding-top: 18px;
 text-transform: none !important;
 font-weight: normal !important;
@@ -121,6 +129,7 @@ nav.pagination span.next{
 
 /* Footer */
 footer {
+	clear:both;
 	text-align:center;
 }
 footer > p {

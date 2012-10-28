@@ -24,10 +24,11 @@
 		</section>
 		<?php } } if( 'open' == $post->comment_status ){ ?>
 		<section class='comments'>
-			<h3>Please Leave A Comment!</h3>
+			<!--<h3>Please Leave A Comment!</h3>
 			<section>
 				<div class="fb-comments" data-href="<?php the_permalink(); ?>" data-num-posts="10" data-width="649"></div>
-			</section>
+			</section>-->
+			<?php comments_template(); ?>
 		</section>
 		<?php } ?>
 		<?php endwhile; ?>
