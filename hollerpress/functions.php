@@ -5,6 +5,40 @@ if ( function_exists( 'add_theme_support' ) ) {
 	set_post_thumbnail_size( 140 , 140 ); //Default post thumbnail size
 }
 
+//Get javascript dependencies loaded
+function hollerpress_scripts()
+{
+	//JQuery
+	wp_deregister_script( 'jquery' );
+    wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
+    wp_enqueue_script( 'jquery' );
+
+	//Handlebars
+	wp_enqueue_script( 'handlebars',
+	get_bloginfo( 'stylesheet_directory' ) . '/js/handlebars.js',
+	null,
+	null,
+	false );
+
+	//Pubnub
+	wp_enqueue_script( 'pubnub' , 
+	'http://cdn.pubnub.com/pubnub-3.3.min.js',
+	null,
+	null,
+	true );
+
+	//Pubnub listener and template parser
+	wp_enqueue_script('post_listener' , 
+		get_bloginfo( 'stylesheet_directory' ) . '/js/new_post_listener.js',
+		null,
+		null,
+		true );
+}
+add_action('wp_enqueue_scripts', 'hollerpress_scripts');
+
+//Load up the real-time posting script
+require_once('includes/realtime.php');
+
 /* Create theme options:
  * - Facebook app id for comments - fb_app_id
  * - Facebook user id - fb_user_id
