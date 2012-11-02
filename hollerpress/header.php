@@ -55,6 +55,7 @@
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<?php wp_head(); ?>
+	<?php if( $theme_options["google_analytics"] ){ ?>
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
@@ -68,6 +69,7 @@
 	  })();
 
 	</script>
+	<?php } ?>
 </head>
 <body>
 	<div id="fb-root"></div>
@@ -82,4 +84,4 @@
 		<h1><a href='/'><?php bloginfo('name'); ?></a></h1>
 		<p><?= $theme_options['site_description'] ?></p>
 	</header>
-	<section>
+	<section id='wrapper'>
