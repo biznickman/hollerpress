@@ -55,10 +55,11 @@
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<?php wp_head(); ?>
+	
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', '<?= $theme_options["google_analytics"] ?>');
+	  _gaq.push(['_setAccount', '<?= $theme_options["google_analytics"] ?>']);
 	  _gaq.push(['_trackPageview']);
 
 	  (function() {
