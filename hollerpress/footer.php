@@ -1,4 +1,5 @@
 	<?php $theme_options = get_option('hp_options'); ?>
+		<?php get_sidebar(); ?>
 	</section>
 	<footer>
 		<p>Copyright &copy; <?= date('Y')."  ".$theme_options['copyright']; ?></p>

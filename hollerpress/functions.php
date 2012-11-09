@@ -1,4 +1,5 @@
 <?php
+$hp_realtime_on = false;
 /* This image will be used for sharing on Facebook, it should be a square */
 if ( function_exists( 'add_theme_support' ) ) { 
   add_theme_support( 'post-thumbnails' ); 
@@ -8,6 +9,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 //Get javascript dependencies loaded
 function hollerpress_scripts()
 {
+	global $hp_realtime_on;
 	//JQuery
 	wp_deregister_script( 'jquery' );
     wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
@@ -20,24 +22,38 @@ function hollerpress_scripts()
 	null,
 	false );
 
-	//Pubnub
-	wp_enqueue_script( 'pubnub' , 
-	'http://cdn.pubnub.com/pubnub-3.3.min.js',
-	null,
-	null,
-	true );
+	if( $hp_realtime_on )
+	{
+		//Pubnub
+		wp_enqueue_script( 'pubnub' , 
+			'http://cdn.pubnub.com/pubnub-3.3.min.js',
+			null,
+			null,
+			true );
 
-	//Pubnub listener and template parser
-	wp_enqueue_script('post_listener' , 
-		get_bloginfo( 'stylesheet_directory' ) . '/js/new_post_listener.js',
-		null,
-		null,
-		true );
+		//Pubnub listener and template parser
+		wp_enqueue_script('post_listener' , 
+			get_bloginfo( 'stylesheet_directory' ) . '/js/new_post_listener.js',
+			null,
+			null,
+			true );
+	}
+	
+	if( is_home() )
+	{
+	//Infinite scroll script
+		wp_enqueue_script('infinite_scroll' ,
+			get_bloginfo( 'stylesheet_directory' ) . '/js/infinite_scroll.js',
+			null,
+			null,
+			true );
+	}
 }
 add_action('wp_enqueue_scripts', 'hollerpress_scripts');
 
 //Load up the real-time posting script
-require_once('includes/realtime.php');
+if( $hp_realtime_on )
+	require_once('includes/realtime.php');
 
 /* Create theme options:
  * - Facebook app id for comments - fb_app_id
@@ -132,6 +148,14 @@ function hp_options_do_page() {
 					<td>
 						<input id="hp_options[logo]" class="regular-text" type="text" name="hp_options[logo]" value="<?php esc_attr_e( $options['logo'] ); ?>" />
 						<label class="description" for="hp_options[logo]"><?php _e( 'Enter a URL of your logo', 'hollerpress_theme' ); ?></label>
+					</td>
+				</tr>
+
+				<!-- Ads snipped -->
+				<tr valign="top"><th scope="row"><?php _e( 'Ads Snippet', 'hollerpress_theme' ); ?></th>
+					<td>
+						<input id="hp_options[ads_snipped]" class="regular-text" type="text" name="hp_options[ads_snippet]" value="<?php esc_attr_e( $options['ads_snippet'] ); ?>" />
+						<label class="description" for="hp_options[ads_snippet]"><?php _e( 'Ads Snippet for ad unit up to 170 pixels wide.', 'hollerpress_theme' ); ?></label>
 					</td>
 				</tr>
 				

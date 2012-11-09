@@ -51,7 +51,8 @@ function hp_post_created( $post_id )
 					'post_id' => $post_id , 
 					'permalink' => get_permalink( $post_id ) ,
 					'title' => $post->post_title,
-					'post_date' => $post->post_date
+					'post_date' => $post->post_date,
+					'excerpt' => $post->post_excerpt
 					)
 			));
 		}

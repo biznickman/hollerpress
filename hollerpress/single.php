@@ -2,11 +2,6 @@
 <?php get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 		<section class='blog'>
-			<!--<section class='post-sidebar-cta'>
-				<div>
-				Sharing widgets go here
-				</div>
-			</section>-->
 			<article>
 				<header>
 					<h1><a href='#'><?php the_title(); ?></a></h1>
@@ -24,8 +19,8 @@
 		</section>
 		<?php } } if( 'open' == $post->comment_status ){ ?>
 		<section class='comments'>
-			<!--<h3>Please Leave A Comment!</h3>
-			<section>
+			<h3>Please Leave A Comment!</h3>
+			<!--<section>
 				<div class="fb-comments" data-href="<?php the_permalink(); ?>" data-num-posts="10" data-width="649"></div>
 			</section>-->
 			<?php comments_template(); ?>

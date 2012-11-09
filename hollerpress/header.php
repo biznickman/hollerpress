@@ -85,3 +85,4 @@
 		<p><?= $theme_options['site_description'] ?></p>
 	</header>
 	<section id='wrapper'>
+		<?php //get_sidebar(); ?>

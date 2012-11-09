@@ -13,11 +13,25 @@ body{
 	line-height: 1.5em;
 	-webkit-font-smoothing:antialiased;
 }
-body > header , body > section , body > footer{
-	max-width: 640px;
+body > header , body > footer{
+	max-width: 600px;
 	width: 96%;
 	margin: 0 auto;
 }
+
+/* Handle the wrapper */
+body > section {
+	max-width: 1024px;
+	width: 96%;
+	margin: 0 auto;
+}
+
+/* Handle the blog posts, etc */
+body > section > section{
+	max-width: 600px;
+	margin: 0 auto;
+}
+
 
 a{ text-decoration: none; color: #131313; border-bottom: #131313 1px solid;}
 
@@ -26,8 +40,10 @@ body > header{
 	color: #949494; 
 	padding:30px 0;
 }
+
 	body > header h1 a , body > header h1 a:hover{
 		/* SET FROM THEME, ALSO OPTIONALLY ALLOW A LOGO*/
+		margin: 0; padding: 0;
 		color: #4ECDC4;
 		border-bottom: 0;
 		text-decoration:none;
@@ -52,6 +68,7 @@ header > h1{
 	line-height: 1.5em;
 }
 
+.blog-teaser { margin-bottom: 2.8em; }
 section {margin-bottom: 2.8em;}
 
 /* Article styling */
@@ -86,30 +103,6 @@ blockquote{
 
 #fbcomments, .fb_iframe_widget, .fb_iframe_widget[style], .fb_iframe_widget iframe[style], #fbcomments iframe[style] {
 	width: 100% !important;
-}
-
-/* Article sharing links */
-
-.blog{
-	position: relative;
-}
-
-.post-sidebar-cta{
-height: 53px;
-padding-top: 18px;
-text-transform: none !important;
-font-weight: normal !important;
-font-size: 12px !important;
-text-align: left !important;
-position: absolute;
-left: -265px;
-top: -15px;
-width: 245px;	
-}
-
-.post-sidebar-cta > div {
-	/*position: fixed;
-	top: 16px;*/
 }
 
 /* Comments */
@@ -154,3 +147,27 @@ footer > p {
 #new-posts p a{
 	text-decoration:none;
 }
+
+/* Sidebar */
+#sidebar {
+     position:fixed;
+     top:100px;
+     width:170px;
+ }
+ @media (max-width: 767px) {
+     #sidebar {
+         width:auto;
+     }
+ }
+
+ @media (max-width: 979px) {
+     #sidebar {
+        position:static;
+        width: auto;
+     }
+ }
+
+ #ads-snippet a{
+ 	border-bottom:none;
+ 	text-decoration: none;
+ }
